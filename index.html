@@ -54,7 +54,7 @@ h1,h2,h3,h4,h5 {
 
 /* LAYOUT */
 .wrap { max-width:1080px; margin:0 auto; padding:0 64px; }
-.section { padding:88px 64px; max-width:1080px; margin:0 auto; position:relative; }
+.section { padding:88px 64px; max-width:1180px; margin:0 auto; position:relative; }
 .sec-num {
   position:absolute; top:72px; right:64px;
   font-family:'Barlow Condensed',sans-serif;
@@ -64,7 +64,7 @@ h1,h2,h3,h4,h5 {
 }
 .sec-head { margin-bottom:52px; }
 .sec-title { font-size:48px; font-weight:900; }
-.sec-sub { color:#888; font-size:13px; max-width:540px; margin-top:10px; line-height:1.65; }
+.sec-sub { color:#888; font-size:14px; max-width:540px; margin-top:10px; line-height:1.65; }
 
 /* HERO */
 .hero {
@@ -106,8 +106,8 @@ h1,h2,h3,h4,h5 {
   font-family:'Barlow Condensed',sans-serif; font-size:56px; font-weight:900;
   color:rgba(200,32,42,0.15); line-height:1; margin-bottom:6px;
 }
-.card h4 { font-size:15px; font-weight:700; letter-spacing:0.06em; margin-bottom:8px; }
-.card p { font-size:12px; color:#888; line-height:1.6; }
+.card h4 { font-size:18px; font-weight:700; letter-spacing:0.06em; margin-bottom:8px; }
+.card p { font-size:14px; color:#888; line-height:1.6; }
 .card-accent { border-top:2px solid var(--red); }
 .card-accent-gold { border-top:2px solid var(--gold); }
 
@@ -116,7 +116,7 @@ h1,h2,h3,h4,h5 {
 .help-quote { border-left:3px solid var(--red); padding-left:24px; }
 .help-quote blockquote { font-size:18px; font-weight:600; font-style:italic; color:var(--white); line-height:1.5; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; letter-spacing:0.04em; }
 .help-quote blockquote em { font-style:normal; color:var(--red); }
-.help-text p { font-size:13px; color:#999; line-height:1.75; margin-bottom:16px; }
+.help-text p { font-size:15px; color:#999; line-height:1.75; margin-bottom:16px; }
 .help-text p:last-child { margin-bottom:0; }
 
 /* EXECUTION BLOCK */
@@ -124,7 +124,7 @@ h1,h2,h3,h4,h5 {
   background:var(--black-3); border:1px solid var(--black-4);
   padding:40px 44px;
 }
-.exec-box p { font-size:13px; color:#999; line-height:1.75; margin-bottom:14px; }
+.exec-box p { font-size:15px; color:#999; line-height:1.75; margin-bottom:14px; }
 .exec-box p:last-child { margin-bottom:0; }
 .exec-box strong { color:var(--white); font-weight:500; }
 .exec-highlight {
@@ -140,15 +140,15 @@ h1,h2,h3,h4,h5 {
   padding:28px 26px; position:relative;
 }
 .flow-item:not(:last-child)::after {
-  content:'›'; position:absolute; right:-14px; top:50%;
+  content:'›'; position:absolute; right:-10px; top:50%;
   transform:translateY(-50%);
-  font-size:20px; color:var(--red); z-index:2;
+  font-size:50px; color:var(--red); z-index:2;
   font-family:'Barlow Condensed',sans-serif; font-weight:900;
 }
-.flow-item h4 { font-size:13px; font-weight:700; color:var(--red); letter-spacing:0.08em; margin-bottom:8px; }
-.flow-item p { font-size:11px; color:#777; line-height:1.55; }
+.flow-item h4 { font-size:18px; font-weight:700; color:var(--red); letter-spacing:0.08em; margin-bottom:8px; }
+.flow-item p { font-size:15px; color:#777; line-height:1.55; }
 .flow-row2 { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:2px; }
-.flow-row2 .flow-item:not(:last-child)::after { content:'‹'; color:var(--red); }
+.flow-row2 .flow-item:not(:last-child)::after { content:'‹'; color:var(--red); font-size: 50px;}
 
 /* DELIVERABLES */
 .deliv-list { 
@@ -158,7 +158,7 @@ h1,h2,h3,h4,h5 {
 .deliv-list ul { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:10px 40px; }
 .deliv-list li {
   display:flex; align-items:flex-start; gap:12px;
-  font-size:12px; color:#aaa; line-height:1.55;
+  font-size:16px; color:#aaa; line-height:1.55;
 }
 .deliv-list li::before {
   content:''; width:5px; height:5px; background:var(--red);
@@ -174,8 +174,8 @@ h1,h2,h3,h4,h5 {
 .plan-step { background:var(--black-3); border:1px solid var(--black-4); padding:24px 30px; display:flex; gap:24px; align-items:flex-start; transition:border-color 0.25s; }
 .plan-step:hover { border-color:var(--red-dim); }
 .step-num { font-family:'Barlow Condensed',sans-serif; font-size:52px; font-weight:900; color:var(--red); line-height:1; flex-shrink:0; }
-.step-content h4 { font-size:15px; font-weight:700; letter-spacing:0.06em; margin-bottom:6px; }
-.step-content p { font-size:12px; color:#888; line-height:1.6; }
+.step-content h4 { font-size:18px; font-weight:700; letter-spacing:0.06em; margin-bottom:6px; }
+.step-content p { font-size:14px; color:#888; line-height:1.6; }
 
 /* BUDGET */
 .budget-box {
@@ -186,7 +186,7 @@ h1,h2,h3,h4,h5 {
 .budget-row { display:flex; align-items:flex-end; justify-content:space-between; gap:40px; padding:20px 0; border-bottom:1px solid var(--black-4); }
 .budget-row:last-of-type { border-bottom:none; }
 .budget-label h4 { font-size:20px; font-weight:800; letter-spacing:0.05em; margin-bottom:4px; }
-.budget-label p { font-size:12px; color:#777; line-height:1.55; }
+.budget-label p { font-size:14px; color:#777; line-height:1.55; }
 .budget-amount { text-align:right; flex-shrink:0; }
 .budget-amount .amount { font-family:'Barlow Condensed',sans-serif; font-size:48px; font-weight:900; line-height:1; }
 .budget-amount .amount sup { font-size:18px; vertical-align:super; }
@@ -196,20 +196,20 @@ h1,h2,h3,h4,h5 {
   padding:28px 48px;
   display:flex; align-items:center; justify-content:space-between;
 }
-.budget-logic { font-size:12px; color:#888; max-width:480px; line-height:1.65; font-style:italic; }
+.budget-logic { font-size:13px; color:#888; max-width:580px; line-height:1.65; font-style:italic; }
 .budget-logic strong { color:var(--white); font-weight:500; font-style:normal; }
 .total-val { font-family:'Barlow Condensed',sans-serif; font-size:32px; font-weight:900; color:var(--red); flex-shrink:0; }
 
 /* LP FLOW */
-.lp-flow { display:flex; flex-direction:column; gap:2px; }
+.lp-flow { display:flex; flex-direction:column; gap:5px; }
 .lp-block { background:var(--black-3); border:1px solid var(--black-4); padding:32px 36px; border-left:3px solid var(--red); transition:border-color 0.25s; }
 .lp-block:hover { border-color:var(--red-dim); }
-.lp-block h4 { font-size:16px; font-weight:700; color:var(--red); letter-spacing:0.08em; margin-bottom:10px; }
-.lp-block p { font-size:13px; color:#999; line-height:1.65; }
+.lp-block h4 { font-size:18px; font-weight:700; color:var(--red); letter-spacing:0.08em; margin-bottom:10px; }
+.lp-block p { font-size:14px; color:#999; line-height:1.65; }
 
 /* GADS POINTS */
 .gads-intro { background:var(--black-3); border:1px solid var(--black-4); padding:36px 40px; margin-bottom:2px; }
-.gads-intro p { font-size:13px; color:#999; line-height:1.7; margin-bottom:10px; }
+.gads-intro p { font-size:15px; color:#999; line-height:1.7; margin-bottom:10px; }
 .gads-intro strong { color:var(--white); font-weight:500; }
 
 /* PRICE BLOCKS */
@@ -252,7 +252,7 @@ h1,h2,h3,h4,h5 {
 .cron-month { background:var(--black-3); border:1px solid var(--black-4); padding:36px 40px; position:relative; transition:border-color 0.25s; }
 .cron-month:hover { border-color:var(--red-dim); }
 .cron-month.dim { opacity:0.45; }
-.cron-lbl { font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--red); margin-bottom:6px; }
+.cron-lbl { font-family:'Barlow Condensed',sans-serif; font-size:15px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--red); margin-bottom:6px; }
 .cron-name { font-family:'Barlow Condensed',sans-serif; font-size:52px; font-weight:900; line-height:1; margin-bottom:24px; }
 .cron-val { position:absolute; top:36px; right:40px; font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; color:var(--gold); }
 .cron-item { display:flex; gap:12px; margin-bottom:14px; }
@@ -260,19 +260,19 @@ h1,h2,h3,h4,h5 {
 .cron-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; margin-top:7px; background:var(--red); }
 .cron-dot.gold { background:var(--gold); }
 .cron-dot.off { background:#333; }
-.ci-title { font-size:13px; font-weight:700; letter-spacing:0.04em; margin-bottom:3px; }
-.ci-desc { font-size:11px; color:#777; line-height:1.5; }
-.ci-off { color:#444; }
+.ci-title { font-size:15px; font-weight:700; letter-spacing:0.04em; margin-bottom:3px; }
+.ci-desc { font-size:14px; color:#777; line-height:1.5; }
+.ci-off { color:#777; }
 
 /* CTA */
 .cta { background:var(--black-2); padding:100px 64px; text-align:center; position:relative; overflow:hidden; }
 .cta::before { content:''; position:absolute; top:50%;left:50%; transform:translate(-50%,-50%); width:700px;height:700px; background:radial-gradient(circle, rgba(200,32,42,0.05) 0%, transparent 65%); pointer-events:none; }
 .cta-eyebrow { font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:var(--red); margin-bottom:20px; }
 .cta-title { font-size:68px; font-weight:900; max-width:720px; margin:0 auto 14px; line-height:0.95; }
-.cta-sub { font-size:13px; color:#555; margin-bottom:48px; }
+.cta-sub { font-size:14px; color:#555; margin-bottom:48px; }
 .cta-btn { display:inline-flex; align-items:center; gap:10px; background:var(--red); color:var(--white); text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:15px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; padding:16px 44px; transition:background 0.2s, transform 0.15s; }
 .cta-btn:hover { background:#a01820; transform:translateY(-2px); }
-.cta-footer { margin-top:44px; font-size:10px; color:#333; letter-spacing:0.1em; text-transform:uppercase; }
+.cta-footer { margin-top:44px; font-size:14px; color:#333; letter-spacing:0.1em; text-transform:uppercase; }
 </style>
 </head>
 <body>
@@ -334,7 +334,7 @@ h1,h2,h3,h4,h5 {
     <div class="sep-accent"></div>
     <h2 class="sec-title">Como Funciona o <em class="red">Método BMS</em></h2>
   </div>
-  <div class="grid-2" style="gap:2px;">
+  <div class="grid-2" style="gap:8px;">
     <div class="card card-accent">
       <div class="card-num">01</div>
       <h4>Análise Detalhada de Dados</h4>
@@ -355,18 +355,7 @@ h1,h2,h3,h4,h5 {
       <h4>Estratégia Personalizada</h4>
       <p>Não adotamos uma abordagem única para todos. Desenvolvemos uma estratégia que se alinha às suas metas, com segmentação precisa a partir do seu canal de vendas.</p>
     </div>
-  </div>
-</div>
-<div class="full-sep-thin"></div>
-
-<!-- 3. MÉTODO BMS (itens 5-8) -->
-<div class="section">
-  <div class="sec-head">
-    <div class="sep-accent"></div>
-    <h2 class="sec-title">Como Funciona o <em class="red">Método BMS</em></h2>
-  </div>
-  <div class="grid-2" style="gap:2px;">
-    <div class="card card-accent">
+<div class="card card-accent">
       <div class="card-num">05</div>
       <h4>Testes e Otimizações</h4>
       <p>Monitoramento constante do desempenho e realização de testes A/B para identificar o que está funcionando melhor — sem achismo, com dados.</p>
@@ -398,7 +387,7 @@ h1,h2,h3,h4,h5 {
   </div>
   <div class="exec-box">
     <p>Com base nas estratégias mais usadas no mercado, toda a campanha será desenvolvida com o máximo de conhecimento e expertise, para alcançar suas metas e objetivos a partir de uma <strong>linha racional entre ambas as partes.</strong></p>
-    <p>Possuo <strong>mais de 11 anos de experiência direta na construção civil</strong> — e isso me dá uma visão panorâmica de como funciona o primeiro contato do cliente até o pós-venda. Entendo o comportamento do cliente que investe em marcenaria de alto padrão.</p>
+    <p>Possuo <strong>mais de 11 anos de experiência direta na construção civil</strong> — e isso me dá uma visão panorâmica de como funciona o primeiro contato do cliente até o pós-venda.</p>
     <div class="exec-highlight">O método a ser usado no começo do projeto visa melhorar as vendas ou ampliar o alcance da marca — a verba será dividida em 70/30.</div>
     <p>A BMS está totalmente focada e de fato se preocupa que todo esse projeto construa uma base sólida para anos à frente, visando sempre a <strong>honestidade e companheirismo em todas as etapas.</strong></p>
   </div>
@@ -422,7 +411,7 @@ h1,h2,h3,h4,h5 {
     </div>
     <div class="flow-item">
       <h4>Suporte</h4>
-      <p>Atendimento de segunda a sexta, das 9 às 19. Mensagens simples via WhatsApp.</p>
+      <p>Atendimento de segunda a sexta, das 9 às 19.</p>
     </div>
     <div class="flow-item">
       <h4>Encontros</h4>
@@ -436,7 +425,7 @@ h1,h2,h3,h4,h5 {
     </div>
     <div class="flow-item">
       <h4>Relatórios</h4>
-      <p>Relatórios semanais e/ou mensais para prestação de contas completa.</p>
+      <p>Mensagens via whatsapp a cada 15 dias.</p>
     </div>
     <div class="flow-item">
       <h4>Outro Serviço</h4>
@@ -480,7 +469,7 @@ h1,h2,h3,h4,h5 {
   <div class="plan-grid">
     <div class="plan-left">
       <h3>Contrato<br>Inicial</h3>
-      <p style="font-size:12px;color:#888;line-height:1.65;">6 meses como fase de aprendizado. Todas as empresas que começam a utilizar estratégias de tráfego pago precisam desse tempo para otimizações constantes.</p>
+      <p style="font-size:14px;color:#888;line-height:1.65;">6 meses como fase de aprendizado. Todas as empresas que começam a utilizar estratégias de tráfego pago precisam desse tempo para otimizações constantes.</p>
     </div>
     <div class="plan-steps">
       <div class="plan-step">
@@ -529,7 +518,7 @@ h1,h2,h3,h4,h5 {
     <div class="budget-row">
       <div class="budget-label">
         <h4>Verba de Anúncios</h4>
-        <p>R$50/dia · segunda a sexta · gerida diretamente pelo cliente. Margem para 2 a 3 campanhas simultâneas com bons testes de público e criativo.</p>
+        <p>Sugestão de R$50/dia · segunda a sexta · gerida diretamente pelo cliente. Margem para 2 a 3 campanhas simultâneas com bons testes de público e criativo.</p>
       </div>
       <div class="budget-amount">
         <div class="amount"><sup>R$</sup>1.000</div>
@@ -539,7 +528,7 @@ h1,h2,h3,h4,h5 {
     <div class="budget-total-row">
       <div class="budget-logic"><strong>Lógica do orçamento:</strong> com R$50 por dia de segunda a sexta, a divisão da verba fica proporcional para 2 a 3 campanhas simultâneas — boa margem para testes. <em>Quanto mais cedo se erra... mais cedo se acerta.</em></div>
       <div>
-        <div style="font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;">Total mensal estimado</div>
+        <div style="font-size:11px;color:#555;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;">Total mensal estimado</div>
         <div class="total-val"><sup style="font-size:16px;">R$</sup>1.897</div>
       </div>
     </div>
@@ -621,7 +610,7 @@ h1,h2,h3,h4,h5 {
     <div class="sep-accent sep-accent-gold"></div>
     <h2 class="sec-title">Entregáveis — <em class="gold">Landing Page</em></h2>
   </div>
-  <div class="grid-2" style="gap:2px;">
+  <div class="grid-2" style="gap:5px;">
     <div class="card card-accent-gold">
       <h4>Página Híbrida</h4>
       <p>Landing Page de conversão + apresentação institucional com a história da empresa, adaptada à identidade visual da DMarques.</p>
@@ -676,7 +665,7 @@ h1,h2,h3,h4,h5 {
   <div class="plan-grid">
     <div class="plan-left" style="border:1px solid var(--gold-dim);">
       <h3 style="color:var(--gold);">Simples<br>e Direto</h3>
-      <p style="font-size:12px;color:#888;line-height:1.65;">Modelamos o que já funciona no mercado para marcenarias de alto padrão e adaptamos para a linguagem e identidade da DMarques.</p>
+      <p style="font-size:14px;color:#888;line-height:1.65;">Modelamos o que já funciona no mercado para marcenarias de alto padrão e adaptamos para a linguagem e identidade da DMarques.</p>
     </div>
     <div class="plan-steps">
       <div class="plan-step" style="border-color:var(--black-4);">
@@ -753,7 +742,7 @@ h1,h2,h3,h4,h5 {
     <span class="tag tag-gray">Google Meu Negócio</span>
     <div class="sep-accent" style="background:var(--gray-dim);"></div>
     <h2 class="sec-title" style="color:#777;">Google <em style="color:#555;">Meu Negócio</em></h2>
-    <p class="sec-sub" style="color:#555;">A ficha da DMarques ainda não existe no Google. Toda empresa deve ter — e é o único canal que trabalha por você sem custo de veiculação, todos os dias.</p>
+    <p class="sec-sub" style="color:#555;">A ficha da DMarques ainda não existe no Google. Toda empresa deve ter — é um canal que trabalha por você sem custo de veiculação, todos os dias.</p>
   </div>
   <div class="card" style="border-left:3px solid var(--gray-dim); padding:36px 40px;">
     <h3 style="font-size:22px;font-weight:800;color:#666;margin-bottom:10px;letter-spacing:0.05em;text-transform:uppercase;">Pacote Essencial GMN · <span style="color:var(--gray);">R$897</span></h3>
@@ -829,10 +818,10 @@ h1,h2,h3,h4,h5 {
     <!-- JULHO -->
     <div class="cron-month dim">
       <div class="cron-lbl">Mês 4 · Se viável</div>
-      <div class="cron-name" style="color:#444;">Julho</div>
+      <div class="cron-name" style="color:#777;">Julho</div>
       <div class="cron-item" style="margin-top:8px;">
         <div class="cron-dot off"></div>
-        <div><div class="ci-title ci-off">Google Ads · avaliação</div><div class="ci-desc" style="color:#555;">90 dias de site no ar. Google indexou o domínio. Se a verba estiver disponível, ativamos as campanhas de busca.</div></div>
+        <div><div class="ci-title ci-off">Google Ads · avaliação</div><div class="ci-desc" style="color:#fff;">90 dias de site no ar. Google indexou o domínio. Se a verba estiver disponível, ativamos as campanhas de busca.</div></div>
       </div>
       <div class="cron-item">
         <div class="cron-dot"></div>
@@ -848,6 +837,7 @@ h1,h2,h3,h4,h5 {
 <div class="cta">
   <div class="cta-eyebrow">BMS · Gestão de Tráfego Pago</div>
   <h2 class="cta-title">VAMOS CONSTRUIR ESSE PROJETO JUNTOS?</h2>
+  <p class="cta-sub"><strong>VOCÊ NUNCA SABE QUE RESULTADOS VIRÃO DA SUA AÇÃO.<br>MAS SE VOCÊ NÃO FIZER NADA, NÃO EXISTIRÃO RESULTADOS" </strong><a style="font-style: italic;"> --Mahatma Gandhi</a></p>
   <p class="cta-sub">Proposta válida até 09/04/2026 · David &amp; Dayany Marques</p>
   <a href="https://wa.me/5516981005730?text=Ol%C3%A1!%20Quero%20avan%C3%A7ar%20com%20a%20proposta%20BMS%20para%20a%20DMarques%20Planejados." class="cta-btn">Falar no WhatsApp →</a>
   <div class="cta-footer">BMS · (16) 98100-5730 · Agência de Marketing para Negócios Locais</div>
