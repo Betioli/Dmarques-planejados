@@ -57,7 +57,7 @@ h1,h2,h3,h4,h5 {
 
 /* LAYOUT */
 .wrap { max-width:1080px; margin:0 auto; padding:0 64px; }
-.section { padding:88px 64px; max-width:1180px; margin:0 auto; position:relative; }
+.section { padding:8px 64px; max-width:1180px; margin:0 auto; position:relative; }
 .sec-num {
   position:absolute; top:72px; right:64px;
   font-family:'Barlow Condensed',sans-serif;
@@ -68,6 +68,43 @@ h1,h2,h3,h4,h5 {
 .sec-head { margin-bottom:52px; }
 .sec-title { font-size:48px; font-weight:900; }
 .sec-sub { color:#888; font-size:14px; max-width:540px; margin-top:10px; line-height:1.65; }
+.accordion-toggle {
+  width:100%;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+  background:none;
+  border:none;
+  padding:0;
+  color:inherit;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+}
+.accordion-toggle:focus-visible {
+  outline:1px solid currentColor;
+  outline-offset:10px;
+}
+.accordion-title-text { flex:1; }
+.accordion-icon {
+  flex-shrink:0;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:28px;
+  font-weight:900;
+  line-height:1;
+  color:inherit;
+  transform:translateY(8px);
+}
+.accordion-content {
+  overflow:hidden;
+  opacity:0;
+  max-height:0;
+  transition:max-height 0.35s ease, opacity 0.25s ease;
+}
+.accordion-section.is-open .accordion-content { opacity:1; }
+.accordion-section .sec-head { margin-bottom:0; }
+.accordion-section .accordion-content { margin-top:52px; }
 
 /* HERO */
 .hero {
@@ -850,5 +887,103 @@ h1,h2,h3,h4,h5 {
   <div class="cta-footer">BMS · (16) 98100-5730 · Agência de Marketing para Negócios Locais</div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var accordionTitles = new Set([
+    'Como Funciona o Método BMS',
+    'Como a BMS vai Executar o Projeto da DMarques Planejados',
+    'Como Acontece na Prática',
+    'Entregáveis da BMS',
+    'Planejamento do Projeto',
+    'Orçamento — Instagram',
+    'Como Funciona o Google ADS',
+    'Criação da Landing Page',
+    'Entregáveis — Landing Page',
+    'Orçamento — Google Ads + Site',
+    'Google Meu Negócio'
+  ]);
+  var openIcon = '\u25BC';
+  var closedIcon = '\u25B6';
+
+  function normalizeText(text) {
+    return text.replace(/\s+/g, ' ').trim();
+  }
+
+  function setAccordionState(section, isOpen) {
+    var button = section.querySelector('.accordion-toggle');
+    var content = section.querySelector('.accordion-content');
+    var icon = section.querySelector('.accordion-icon');
+
+    section.classList.toggle('is-open', isOpen);
+    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    icon.textContent = isOpen ? openIcon : closedIcon;
+    content.style.maxHeight = isOpen ? content.scrollHeight + 'px' : '0px';
+  }
+
+  var matchedSections = Array.from(document.querySelectorAll('.section')).filter(function (section) {
+    var title = section.querySelector('.sec-head .sec-title');
+    return title && accordionTitles.has(normalizeText(title.textContent));
+  });
+
+  matchedSections.forEach(function (section, index) {
+    var head = section.querySelector('.sec-head');
+    var title = head.querySelector('.sec-title');
+    var content = document.createElement('div');
+    var button = document.createElement('button');
+    var titleText = document.createElement('span');
+    var icon = document.createElement('span');
+    var contentId = 'accordion-content-' + index;
+    var node;
+
+    section.classList.add('accordion-section');
+    section.setAttribute('data-accordion', '');
+
+    button.className = 'accordion-toggle';
+    button.type = 'button';
+    button.setAttribute('aria-controls', contentId);
+
+    titleText.className = 'accordion-title-text';
+    titleText.innerHTML = title.innerHTML;
+
+    icon.className = 'accordion-icon';
+    icon.setAttribute('aria-hidden', 'true');
+
+    button.appendChild(titleText);
+    button.appendChild(icon);
+    title.innerHTML = '';
+    title.appendChild(button);
+
+    content.className = 'accordion-content';
+    content.id = contentId;
+
+    node = title.nextSibling;
+    while (node) {
+      var nextNode = node.nextSibling;
+      content.appendChild(node);
+      node = nextNode;
+    }
+
+    while (head.nextSibling) {
+      content.appendChild(head.nextSibling);
+    }
+
+    section.appendChild(content);
+    setAccordionState(section, index === 0);
+
+    button.addEventListener('click', function () {
+      setAccordionState(section, !section.classList.contains('is-open'));
+    });
+  });
+
+  window.addEventListener('resize', function () {
+    matchedSections.forEach(function (section) {
+      if (section.classList.contains('is-open')) {
+        var content = section.querySelector('.accordion-content');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
